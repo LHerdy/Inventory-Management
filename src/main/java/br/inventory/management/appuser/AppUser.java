@@ -44,13 +44,12 @@ public class AppUser implements UserDetails {
 
     public AppUser(
                    String firstName,
-                   String lastname,
+                   String lastName,
                    String email,
                    String password,
                    AppUserRole appUserRole) {
-        this.id = id;
         this.firstName = firstName;
-        this.lastName = lastname;
+        this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.appUserRole = appUserRole;
@@ -65,19 +64,16 @@ public class AppUser implements UserDetails {
 
     @Override
     public String getPassword() {
-
         return password;
     }
 
     @Override
     public String getUsername() {
-
         return email;
     }
 
     public String getFirstName() {
         return firstName;
-
     }
 
     public String getLastName() {
